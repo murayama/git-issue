@@ -54,6 +54,7 @@ module GitIssue
       case its_type
         when /redmine/i then GitIssue::Redmine
         when /github/i  then GitIssue::Github
+        when /github_enterprise/i  then GitIssue::GithubEnterprise
         else
           raise "unknown issue tracker type : #{its_type}"
       end
@@ -159,3 +160,4 @@ end
 require File.dirname(__FILE__) + '/git_issue/base'
 require File.dirname(__FILE__) + '/git_issue/redmine'
 require File.dirname(__FILE__) + '/git_issue/github'
+require File.dirname(__FILE__) + '/git_issue/github_enterprise'
