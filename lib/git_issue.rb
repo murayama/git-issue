@@ -53,8 +53,8 @@ module GitIssue
     def its_klass_of(its_type)
       case its_type
         when /redmine/i then GitIssue::Redmine
-        when /github/i  then GitIssue::Github
         when /github_enterprise/i  then GitIssue::GithubEnterprise
+        when /github/i  then GitIssue::Github
         else
           raise "unknown issue tracker type : #{its_type}"
       end

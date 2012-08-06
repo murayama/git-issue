@@ -193,7 +193,7 @@ class GitIssue::GithubEnterprise < GitIssue::Base
   private
 
   #ROOT = 'https://api.github.com/'
-  apiurl = configured_value('issue.apiurl')
+  apiurl = Helper.configured_value('issue.apiurl')
   ROOT = apiurl
   def to_url(*path_list)
     URI.join(ROOT, path_list.join("/"))
